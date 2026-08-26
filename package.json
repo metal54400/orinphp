@@ -1,0 +1,45 @@
+{
+  "name": "orinphp",
+  "version": "3.0.0",
+  "description": "Run PHP applications directly from Node.js without requiring a system-wide PHP installation.",
+  "type": "module",
+  "main": "./src/index.js",
+  "exports": {
+    ".": "./src/index.js",
+    "./platform": "./src/platform.js",
+    "./runtime": "./src/runtime.js"
+  },
+  "bin": {
+    "orinphp": "./bin/orinphp.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "scripts",
+    "examples",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node --test",
+    "runtime": "node ./scripts/install-runtime.js",
+    "start:example": "node ./bin/orinphp.js examples/basic"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "php",
+    "php-runtime",
+    "php-server",
+    "cgi",
+    "nodejs",
+    "web-server",
+    "orinphp"
+  ],
+  "license": "MIT",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  }
+}
